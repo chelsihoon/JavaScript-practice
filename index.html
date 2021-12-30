@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // <script src="test.js">
+        var num = Number("0");
+        var bool = Boolean(num);
+        var str = "나는 문자";
+
+        // document.write(bool)
+        document.write(typeof str, "<br>")
+        // console.log(num)
+
+        const num1 = 10;
+        const num2 = 3;
+        let result;
+
+        result = num1 + num2;
+        document.write(result, "<br>");
+
+        result = num1 - num2;
+        document.write(result, "<br>");
+
+        result = num1 / num2;
+        document.write(result, "<br>");
+
+        result = num1 % num2;
+        document.write(result, "<br>");
+
+        
+        let num_1 = 10;
+        let num_2 = 3;
+
+        num_1 += num_2;
+        document.write(num_1, "<br>");
+
+        num_1 -= num_2;
+        document.write(num_1, "<br>");
+        num_1 *= num_2;
+        document.write(num_1, "<br>");
+        num_1 /= num_2;
+        document.write(num_1, "<br>");
+        num_1 %= num_2;
+        document.write(num_1, "<br>");
+
+        var bg = "<div style='background-color:yellowgreen'>";
+        bg += "<h1>잘되나?"
+        bg += "</h1>"
+        bg += "</div>"
+        document.write(bg);
+
+
+
+        num_2 = 20;
+        result = num_2++;
+        document.write(result, "<br>");
+        document.write(num_2, "<br>");
+
+        num_2 = 30;
+        result = num_2--;
+        document.write(result, "<br>");
+        document.write(num_2, "<br>");
+
+        num_2 = 20;
+        result = ++num_2;
+        document.write(result, "<br>");
+        document.write(num_2, "<br>");
+
+        num_2 = 30;
+        result = --num_2;
+        document.write(result, "<br>");
+        document.write(num_2, "<br>");
+
+        var a = "10";
+        var b = 10;
+        var c = 20;
+
+        result =  a == b;
+        document.write(result, "<br>");
+
+        result =  a != b;
+        document.write(result, "<br>");
+
+        result =  a !== b;
+        document.write(result, "<br>");
+
+        result =  a === b;
+        document.write(result, "<br>");
+
+        result = a == b ? "correct" : "nope"
+        document.write(result, "<br>")
+
+        result = a !== b ? "correct" : "nope"
+        document.write(result, "<br>")
+
+        
+        // var nam = prompt("안녕하세요", "데헷");
+        // if(nam){
+        //     document.write(nam)
+        // }
+        // if 문에 0, false, null,""(빈문자), undefined가 아니면 모두 True
+
+                
+        // var nam = prompt("좋아하는 숫자를 입력 하세요", "데헷");
+        // if(nam){
+        //     document.write(nam)
+        // }
+
+        let id = "imhsh";
+        let pw = 1234;
+
+        // let user_id = prompt("당신의 아이디는?");
+        // let user_pw = prompt("당신의 비번은?");
+
+        // if (id == user_id){
+        //     if(pw == user_pw){
+        //         alert(user_id + "님 접속을 환영합니다.");
+        //     }else{
+        //         alert("비밀 번호를 확인해주세요");
+        //         location.reload();
+        //     }
+        // }else{
+        //     alert("아이디를 확인해주세요");
+        //     location.reload();
+        // }
+
+        // let moving = prompt("원하는 사이트를 입력하세요(네이버 구글 다음)","여기에");
+
+        // switch(moving){
+        //     case "네이버" : url = "www.naver.com";
+        //     break;
+
+        //     case "구글" : url = "www.google.com";
+        //     break;
+
+        //     case "다음" : url = "www.daum.net";
+        //     break; 
+
+        //     default:alert("보기에 있는 사이트를 골라주세요");
+        // }
+
+        // if(url){
+        //     location.href = "http://" + url;
+        // }
+
+        // let s = 1;
+
+        // while(s < 100){
+        //     if ( s % 2 == 0){
+        //         document.write("<div style='color:aqua'>"+ s +"</div>")
+        //     }else{
+        //         document.write("<div style='color:red'>"+ s +"</div>")
+        //     }
+        //     s++;
+        // }
+
+        // for(f=1; f<100; f++){
+        //     if ( f % 2 == 0){
+        //         document.write("<div style='color:yellowgreen'>"+ f +"</div>")
+        //     }else if( f % 7 == 0 && f % 5 == 0 ){
+        //         document.write("<div style='color:red'>"+ f +"</div>")
+        //         break; // 측정 조건 충족시 반복문 중단
+        //     }else{
+        //         document.write("<div style='color:skyblue'>"+ f +"</div>")
+        //     }
+        // }
+
+        let ct = 1;
+        while(ct <= 10){
+            document.write(ct, "<br>");
+            ct++;
+            if (ct % 2 == 0) {continue};
+        }
+
+        // console.log(ct);
+        // for(c = 1; c <= 10; c++){
+        //     if (c % 2 == 0) continue;
+        //     document.write(c, "<br>");
+        // }
+        
+
+    </script>
+</body>
+</html>
