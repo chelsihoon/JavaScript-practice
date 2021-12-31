@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Time Until Christmas</h1>
+    <div class="js-clock">
+      <h3></h3>
+    </div> -->
+    <script>
+        // // 객체 생성 및 속성과 메서드 구조
+        // const tv = new Object();
+        // tv.color = "white";
+        // tv.price = 3000;
+        // tv.info = function(){
+        //     document.write("tv 색상 : " + this.color,"<br>");
+        //     document.write("tv 가격 : " + this.price,"<br>");
+        // }
+
+        // const car = {
+        //     color:"black",
+        //     price:6000,
+        //     info:function(){
+        //         document.write("car 색상 : " + this.color,"<br>")
+        //         document.write("car 가격 : " + this.price,"<br>")
+        //     }
+        // } 
+
+        // // Date 객체
+        // document.write("<h1>tv 객체 메서드 호출</h1>");
+        // tv.info();
+        // document.write("<h1>car 객체 메서드 호출</h1>");
+        // car.info();
+
+        const today = new Date();
+        // const nowMonth = today.getMonth();
+        // const nowDate = today.getDate();
+        // const nowDay = today.getDay();
+        
+        // document.write("<h1>오늘 날짜 정보</h1>" + today,"<br>");
+        // document.write("현재 월 : " + nowMonth,"<br>");
+        // document.write("현재 일 : " + nowDate,"<br>");
+        // document.write("현재 요일 : " + nowDay,"<br>");
+
+        // const worldCupDate = new Date(2002,4,31);
+        // const worldMonth = worldCupDate.getMonth(), worldDate = worldCupDate.getDate(), worldDay = worldCupDate.getDay();
+
+        // document.write("<h1>2002 한일 월드컵 날짜 정보</h1>" + worldCupDate,"<br>");
+        // document.write("월드컵 월 : " + worldMonth,"<br>");
+        // document.write("월드컵 일 : " + worldDate,"<br>");
+        // document.write("월드컵 요일 : " + worldDay,"<br><br>");
+        
+        const newYear = today.getFullYear();
+        const newDate = new Date(2022,0,1); //Month는 0부터 시작하기 때문에 0은 1월(January), 11은 12월(December)가 됨
+        const targetDate = newDate.getTime() - today.getTime();
+        const resultDay = Math.floor(targetDate / (1000*60*60*24));
+        const resultHour = Math.floor((targetDate % (1000*60*60*24)) / (1000*60*60));
+        const resultMin = Math.floor((targetDate % (1000*60*60)) / (1000*60));
+        const resultSec = Math.floor((targetDate % (1000*60)) / 1000);
+
+        document.write("내년까지 " + resultDay + "일, "+resultHour+"시, "+resultMin+"분, "+resultSec+"초 남았습니다.", "<br><br>");
+
+        // const timerContainer=document.querySelector(".js-clock"),
+        // timer=timerContainer.querySelector("h3");
+
+        // function getTime() {
+        //     const xmasDay = new Date(2022,0,1);
+        //     const now=new Date();
+        //     const gap=xmasDay-now;
+        //     const day=Math.floor(gap/(1000*60*60*24)); //일
+        //     const hours=Math.floor((gap/(1000*60*60))%24); //시
+        //     const minutes=Math.floor(((gap/1000)*60)%60); //분
+        //     const seconds=Math.floor((gap/1000)%60); //초
+            
+        //     timer.innerText=`${day}d ${hours<10?`0${hours}`:hours}h ${minutes<10?`0${minutes}`:minutes}m ${seconds<10? `0${seconds}`:seconds}s`;
+        //     }
+
+        //     function init() {
+        //         getTime();
+        //         setInterval(getTime,1000);
+        //     }
+        //     init();
+
+        // const num = 3.14;
+
+        // const absNum = Math.abs(num);
+        // document.write(absNum,"<br>");
+
+        // const maxNum = Math.max(65,6,64,418,49);
+        // document.write(maxNum,"<br>");
+
+        // const minNum = Math.min(65,6,64,418,49);
+        // document.write(minNum,"<br>");
+
+        // const powNum = Math.pow(2, 2);
+        // document.write(powNum,"<br>");
+
+        // const ranNum = Math.random()*10;// 0 ~ 10의 난수
+        // document.write(ranNum,"<br>");
+
+        // const rouNum = Math.round(num);
+        // document.write(rouNum,"<br>");
+
+        // const ceilNum = Math.ceil(num);
+        // document.write(ceilNum,"<br>");
+
+        // const floorNum = Math.floor(num);
+        // document.write(floorNum,"<br>");
+
+        // const sqrtNum = Math.sqrt(num);
+        // document.write(sqrtNum,"<br>");
+
+        // const piNum = Math.PI;
+        // document.write(piNum,"<br><br>");
+
+        // const randomCeil = Math.ceil(Math.random()*10);// 1 ~ 10의 난수, 무조건 올림 사용
+        // document.write(randomCeil,"<br>");
+        
+        // const randomFloor = Math.floor(Math.random()*10);// 0 ~ 9의 난수, 무조건 내림 사용
+        // document.write(randomFloor,"<br><br>");
+
+        let userNum = prompt("가위 바위 보 중 무엇을 낼지 맞춰 보세요!","여기에 작성");
+        let game = Math.ceil(Math.random()*3);
+        let gameNum;
+        
+
+        if(userNum == "가위"){
+            gameNum = 1;
+        }else if (userNum == "바위"){
+            gameNum = 2;
+        }else if(userNum == "보"){
+            gameNum = 3;
+        }else{
+            alert("다시 바르게 입력하세요.");
+            window.location.reload();
+        }
+
+        if(game == gameNum){
+            document.write("축하 합니다 승리하셨습니다!<br>당신이 낸것 '" +userNum+"'");
+        }else{
+            document.write("아닙니다. 새로고침 후 다시 이용하세요")
+        }
+    </script>
+</body>
+</html>
