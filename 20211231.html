@@ -123,27 +123,63 @@
         // const randomFloor = Math.floor(Math.random()*10);// 0 ~ 9의 난수, 무조건 내림 사용
         // document.write(randomFloor,"<br><br>");
 
-        let userNum = prompt("가위 바위 보 중 무엇을 낼지 맞춰 보세요!","여기에 작성");
-        let game = Math.ceil(Math.random()*3);
-        let gameNum;
+        // let userNum = prompt("가위 바위 보 중 무엇을 낼지 맞춰 보세요!","여기에 작성");
+        // let game = Math.ceil(Math.random()*3);
+        // let gameNum;
         
 
-        if(userNum == "가위"){
-            gameNum = 1;
-        }else if (userNum == "바위"){
-            gameNum = 2;
-        }else if(userNum == "보"){
-            gameNum = 3;
-        }else{
-            alert("다시 바르게 입력하세요.");
-            window.location.reload();
-        }
+        // if(userNum == "가위"){
+        //     gameNum = 1;
+        // }else if (userNum == "바위"){
+        //     gameNum = 2;
+        // }else if(userNum == "보"){
+        //     gameNum = 3;
+        // }else{
+        //     alert("다시 바르게 입력하세요.");
+        //     window.location.reload();
+        // }
 
-        if(game == gameNum){
-            document.write("축하 합니다 승리하셨습니다!<br>당신이 낸것 '" +userNum+"'");
-        }else{
-            document.write("아닙니다. 새로고침 후 다시 이용하세요")
-        }
+        // if(game == gameNum){
+        //     document.write("축하 합니다 승리하셨습니다!<br>당신이 낸것 '" +userNum+"'");
+        // }else{
+        //     document.write("아닙니다. 새로고침 후 다시 이용하세요")
+        // }
+
+        var arr_1 = ["교대","방배","강남"];
+        arr_1.splice(2,1,"서초","역삼");
+        console.log(arr_1);
+        
+        var arr_2 = ["미금","정자","수서"];
+        arr_2.splice(2,0,"서초","역삼");
+        console.log(arr_2);
+
+        let arr_1Pop = arr_1.pop(); //추가된 배열 값중 마지막인 '역삼' 삭제
+        console.log(arr_1);
+        console.log(arr_1Pop);
+        arr_1.push(arr_1Pop); // 삭제된 '역삼'을 배열 마지막에 다시 삽입
+        console.log(arr_1);
+
+        let arr_2Shift = arr_2.shift(); //가장 앞에 있는 '미금' 삭제
+        console.log(arr_2);
+        console.log(arr_2Shift);
+        arr_2.unshift(arr_2Shift); // 삭제된 '미금'을 가장 앞에 다시 삽입
+        console.log(arr_2);
+
+        let strr = "hello javascript";
+        let st = strr.slice(3,7);
+        console.log(st);
+
+        st = strr.slice(3,-3); //1번 부터 시작
+        console.log(st);
+
+        st = strr.substring(3,7); //인덱스라 0번 부터 시작
+        console.log(st);
+
+        st = strr.substring(3,-3); //인덱스 -3은 0임.. 그래서 아래 두개가 같음 0부터~3까지
+        console.log(st);
+        st = strr.substring(-3,3);
+        console.log(st);
+        
     </script>
 </body>
 </html>
