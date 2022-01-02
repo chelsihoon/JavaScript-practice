@@ -58,13 +58,14 @@
         let user = navigator.userAgent;
         document.write(user, "<br>");
 
-        // let func_1;
+        //일반 함수 선언 방법(호이스팅 가능)
         function func_1 (){
             document.write("hello yeah","<br>");
         }
 
         func_1();
 
+        //익명 함수 선언 방법
         func_2 = function(){
             document.write("hello yep","<br>");
         }
