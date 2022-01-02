@@ -56,7 +56,27 @@
         // window.open(naver);
 
         let user = navigator.userAgent;
-        document.write(user);
+        document.write(user, "<br>");
+
+        // let func_1;
+        function func_1 (){
+            document.write("hello yeah","<br>");
+        }
+
+        func_1();
+
+        func_2 = function(){
+            document.write("hello yep","<br>");
+        }
+        func_2();
+
+        function sum(){
+            let sum = arguments[0] + arguments[1] + arguments[2];
+            document.write(arguments[0], "<br>");
+            document.write(sum , "<br>");
+        }
+        sum(10, 20, 30);
+
     </script>
 </body>
 </html>
