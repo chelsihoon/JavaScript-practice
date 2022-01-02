@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문자열 객체 이어서..
+        var str = "webkmobilek2022";
+        var arr=str.split("k");
+        document.write(arr,"<br>", arr[0], "<br>", arr[1], "<br>",arr[2], "<br>");
+
+        let concat = "hello";
+        let concat_2 = concat.concat(" JS");
+        document.write(concat_2, "<br>");
+
+        let aski = str.charCodeAt([0]); //[]는 생략 가능 함
+        document.write(aski, "<br>");
+
+        let char = String.fromCharCode(119);
+        document.write(char, "<br>");
+
+        let trim = " j a v a s c r i p t ";
+        let trim_on = trim.trim();
+        document.write(trim, "<br>", trim_on, "<br>");
+
+        // let userNum = prompt("당신의 연락처는?", "여기에 작성");
+        // let result = userNum.substring(0, userNum.length - 4) +"****";
+        // document.write(result);2
+
+        // let userEmail = prompt("당신의 이메일 주소를 입력하세요", "여기에");
+        // const mailList = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+        // let confirm_1 = false;
+        // let confirm_2 = false;
+        // if(userEmail.indexOf("@") > 0){
+        //         confirm_1 = true;
+        //     }
+
+        // for(i = 0; i < mailList.length; i ++){ //mailList.length 배열 갯수만큼의 수
+        //     if(userEmail.indexOf(mailList[i]) > 0){ //배열 변수 내 값이 일치하는 값이 있을 경우 인덱스 숫자 크기가 부여되어 0보다 크게됨
+        //         confirm_2 = true;
+        //     }
+        // }
+
+        // if(confirm_1 && confirm_2){
+        //     document.write(userEmail);
+        // }else{
+        //     alert("이메일 주소를 확인해주세요");
+        //     location.reload();
+        // }
+
+        // let naver = "http://www.naver.com";
+        // window.open(naver);
+
+        let user = navigator.userAgent;
+        document.write(user);
+    </script>
+</body>
+</html>
