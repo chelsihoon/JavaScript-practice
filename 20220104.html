@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let scope = 10;
+
+        function lett(){
+            let scope = 30; 
+
+           //alert(scope); // 30 먼저
+        }
+
+        lett();
+
+       // alert(scope); // 10 나중에
+
+       function fnc1(){
+        function fnc2(){
+        alert("지역함수");
+        }
+        fnc2(); //지역 함수 호출
+    }
+    
+    function fnc3(){
+        alert("전역함수");
+    }
+
+    fnc1();
+    fnc3();//전역 함수 호출
+        
+    </script>
+</body>
+</html>
