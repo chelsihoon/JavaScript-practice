@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 지역 함수 1
+        // (function(){
+        //     let num = 100;
+        //     function test(){
+        //         num += 100;
+        //         alert(num);
+        //     }
+        //     test();
+        // }()); //바로 함수 실행
+
+        // 지역 함수 2
+        // (function(){
+        //     let num = 100;
+        //     function menu(){
+        //         alert(num);
+        //     }
+        //     menu();
+        // }());
+
+        function CheckThisOut(name, height, weight){
+            this.userName = name;
+            this.userHeight = height;
+            this.userWeight = weight;
+            this.minWeight;
+            this.maxWeight;
+
+            this.userInfo = function(){
+                let str = "";
+                str += "이름 : " + this.userName + "<br>";
+                str += "신장 : " + this.userHeight +"<br>";
+                str += "체중 : " + this.userWeight + "<br>";
+                return str;
+            }
+
+            this.userResult = function(){
+                this.minWeight = (this.userHeight - 100) * 0.9 - 5;
+                this.maxWeight = (this.userHeight - 100) * 0.9 + 5;
+                if(this.userWeight >= this.minWeight && this.userWeight <= this.maxWeight){
+                    return "정상 몸무게 입니다.";
+                } else if(this.userWeight < this.minWeight){
+                    return "정상 몸무게 보다 미달입니다.";
+                } else {
+                    return "정상 몸무게 보다 초과입니다.";
+                }
+            }
+        }
+        //데이터 입력
+        var jang = new CheckThisOut("장그래",170,68);
+        var kim = new CheckThisOut("킴그래",180,44);
+        var park = new CheckThisOut("박그래",165,85);
+        // new가 있어야 객체로 블록(지역)이 되며, 그래야 함수 내부의 내용을 불러올수 있음
+        // 만약 없으면 정의 되지 않은 오류가 나며.. 내부 변수들은 전역변수로 선언됨의 차이를 확인할수 있음  
+
+        // 로그 체크
+        console.log(jang);
+        console.log(kim);
+        console.log(park);
+
+        //함수 실행
+        document.write(park.userInfo());
+        document.write(park.userResult());
+    </script>
+</body>
+</html>
